@@ -99,12 +99,16 @@ class AzureAIFoundryBot:
             logger.info(f"Started run: {run.id}")
             
             # Wait for the run to complete
+            backoff = 1  # initial backoff in seconds
+            max_backoff = 8  # maximum backoff in seconds
             while run.status in ["queued", "in_progress", "cancelling"]:
-                time.sleep(1)
+                time.sleep(backoff)
                 run = self.client.agents.get_run(
                     thread_id=self.thread.id,
                     run_id=run.id
                 )
+                if backoff < max_backoff:
+                    backoff = min(backoff * 2, max_backoff)
             
             if run.status == "completed":
                 # Get the latest messages from the thread
