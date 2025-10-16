@@ -5,6 +5,8 @@ A simple Python chat bot that connects to Azure AI Foundry using the Azure AI Pr
 ## Features
 
 - 🤖 Interactive chat bot powered by Azure AI Foundry
+- 🌐 Modern web interface with Chainlit (optional)
+- 💻 Command-line interface for terminal users
 - 🔐 Secure authentication using Azure DefaultAzureCredential
 - 💬 Conversation management with threads and messages
 - 📜 Conversation history tracking
@@ -48,13 +50,30 @@ export AZURE_TENANT_ID=your-tenant-id
 
 ## Usage
 
-Run the chat bot:
+### Option 1: Web Interface (Chainlit UI)
+
+Run the chat bot with a modern web interface:
+```bash
+chainlit run chainlit_app.py
+```
+
+Then open your browser to `http://localhost:8000` to access the chat interface.
+
+### Option 2: Command Line Interface
+
+Run the chat bot in the terminal:
 ```bash
 python main.py
 ```
 
 ### Commands
 
+**Web Interface:**
+- Type any message to chat with the bot
+- Refresh the page to start a new conversation
+- The conversation history is maintained during your session
+
+**Command Line Interface:**
 - Type any message to chat with the bot
 - Type `quit` to exit the application
 - Type `reset` to start a new conversation
@@ -64,11 +83,16 @@ python main.py
 
 ```
 ghcp-demo-run/
-├── main.py              # Main chat bot application
+├── main.py              # Command-line chat bot application
+├── chainlit_app.py      # Chainlit web interface
+├── chainlit.md          # Welcome page for Chainlit UI
+├── .chainlit            # Chainlit configuration
+├── QUICKSTART.md        # Quick start guide
+├── CHAINLIT_GUIDE.md    # Detailed Chainlit documentation
 ├── requirements.txt     # Python dependencies
-├── .env                # Azure configuration (not committed to git)
-├── .gitignore          # Git ignore file
-└── README.md           # This file
+├── .env                 # Azure configuration (not committed to git)
+├── .gitignore           # Git ignore file
+└── README.md            # This file
 ```
 
 ## Key Components
@@ -110,6 +134,12 @@ The bot uses the following environment variables:
 - ✅ Environment-based configuration
 - ✅ Proper error handling and logging
 - ✅ Connection string format for endpoint configuration
+
+## Documentation
+
+- **QUICKSTART.md** - Get started quickly with simple step-by-step instructions
+- **CHAINLIT_GUIDE.md** - Comprehensive guide to the Chainlit UI implementation
+- **README.md** (this file) - Overview and general information
 
 ## Troubleshooting
 
