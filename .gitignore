@@ -72,3 +72,8 @@ Thumbs.db
 # Logs
 *.log
 logs/
+
+# Chainlit
+.chainlit/
+.files/
+chainlit.db
