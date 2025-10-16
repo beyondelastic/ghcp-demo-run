@@ -1,0 +1,11 @@
+# Azure AI Foundry SDK
+azure-ai-projects>=1.0.0
+
+# Authentication
+azure-identity>=1.15.0
+
+# Environment variables management
+python-dotenv>=1.0.0
+
+# Additional useful packages for logging and development
+requests>=2.31.0
