@@ -87,6 +87,8 @@ ghcp-demo-run/
 ├── chainlit_app.py      # Chainlit web interface
 ├── chainlit.md          # Welcome page for Chainlit UI
 ├── .chainlit            # Chainlit configuration
+├── QUICKSTART.md        # Quick start guide
+├── CHAINLIT_GUIDE.md    # Detailed Chainlit documentation
 ├── requirements.txt     # Python dependencies
 ├── .env                 # Azure configuration (not committed to git)
 ├── .gitignore           # Git ignore file
@@ -132,6 +134,12 @@ The bot uses the following environment variables:
 - ✅ Environment-based configuration
 - ✅ Proper error handling and logging
 - ✅ Connection string format for endpoint configuration
+
+## Documentation
+
+- **QUICKSTART.md** - Get started quickly with simple step-by-step instructions
+- **CHAINLIT_GUIDE.md** - Comprehensive guide to the Chainlit UI implementation
+- **README.md** (this file) - Overview and general information
 
 ## Troubleshooting
 
