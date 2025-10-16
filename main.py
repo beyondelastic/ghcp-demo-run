@@ -115,7 +115,9 @@ class AzureAIFoundryBot:
                 messages = self.client.agents.list_messages(thread_id=self.thread.id)
                 
                 # Find the assistant's response (most recent message from assistant)
-                for msg in messages.data:
+                # Sort messages by created_at descending to ensure most recent first
+                sorted_messages = sorted(messages.data, key=lambda m: m.created_at, reverse=True)
+                for msg in sorted_messages:
                     if msg.role == "assistant":
                         # Extract text content from the message
                         if msg.content and len(msg.content) > 0:
