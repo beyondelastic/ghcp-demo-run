@@ -102,8 +102,6 @@ The application includes comprehensive error handling:
 The bot uses the following environment variables:
 
 - `AZURE_AI_PROJECT_ENDPOINT`: Your Azure AI Foundry project endpoint (required)
-- `AZURE_SUBSCRIPTION_ID`: Azure subscription ID (optional)
-- `AZURE_RESOURCE_GROUP`: Resource group name (optional)
 
 ## Security Best Practices
 
