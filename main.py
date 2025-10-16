@@ -120,7 +120,7 @@ class AzureAIFoundryBot:
                         # Extract text content from the message
                         if msg.content and len(msg.content) > 0:
                             return msg.content[0].text.value
-                        break
+                            break
                 
                 return "I apologize, but I couldn't generate a response."
             
